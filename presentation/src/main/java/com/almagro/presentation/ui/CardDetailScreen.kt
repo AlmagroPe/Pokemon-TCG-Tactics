@@ -1,4 +1,4 @@
-package com.almagro.presentation.detail
+package com.almagro.presentation.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,8 +28,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import com.almagro.domain.model.CardInfo
-import com.almagro.presentation.ErrorScreen
-import com.almagro.presentation.LoadingScreen
+import com.almagro.presentation.viewModel.CardDetailViewModel
+import com.almagro.presentation.state.CardDetailViewState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

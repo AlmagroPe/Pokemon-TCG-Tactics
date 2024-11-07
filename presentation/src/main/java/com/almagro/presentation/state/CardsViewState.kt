@@ -1,4 +1,4 @@
-package com.almagro.presentation.cardList
+package com.almagro.presentation.state
 
 sealed class CardsViewState<out T> {
     object Loading : CardsViewState<Nothing>()

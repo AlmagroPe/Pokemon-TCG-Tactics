@@ -45,13 +45,15 @@ PokemonTCGTactics/
 ├── data/                  # Data layer and API
 │   ├── di/                # Dependency injection modules
 │   ├── model/             # Data models and mappers
+│   ├── sources/           # Sources data implementations
 │   └── repository/        # Repository implementations
 ├── domain/                # Domain layer
 │   ├── model/             # Domain models
-│   └── usecase/           # Use cases
+│   ├── repository/        # Repository interfaces
+│   └── useCase/           # Use cases
 └── presentation/          # Presentation layer (UI)
     ├── ui/                # Screens and UI components
-    ├── viewmodel/         # Screen ViewModels
+    ├── viewModel/         # Screen ViewModels
     └── state/             # UI states
 ```
 

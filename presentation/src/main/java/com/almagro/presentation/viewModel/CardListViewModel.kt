@@ -1,9 +1,10 @@
-package com.almagro.presentation.cardList
+package com.almagro.presentation.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.almagro.domain.model.CardInfo
 import com.almagro.domain.useCase.FetchCardsUseCase
+import com.almagro.presentation.state.CardsViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

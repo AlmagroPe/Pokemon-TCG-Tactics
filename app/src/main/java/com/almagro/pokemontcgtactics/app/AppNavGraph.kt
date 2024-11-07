@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.almagro.presentation.cardList.CardListScreen
-import com.almagro.presentation.detail.PokemonDetailScreen
+import com.almagro.presentation.ui.CardListScreen
+import com.almagro.presentation.ui.PokemonDetailScreen
 
 @Composable
 fun AppNavGraph() {

@@ -6,8 +6,8 @@ import com.almagro.domain.model.Images
 import com.almagro.domain.model.Legalities
 import com.almagro.domain.model.SetImages
 import com.almagro.domain.useCase.FetchCardDetailUseCase
-import com.almagro.presentation.detail.CardDetailViewModel
-import com.almagro.presentation.detail.CardDetailViewState
+import com.almagro.presentation.viewModel.CardDetailViewModel
+import com.almagro.presentation.state.CardDetailViewState
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
 import io.mockk.mockk

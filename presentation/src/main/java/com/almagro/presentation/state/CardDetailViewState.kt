@@ -1,4 +1,4 @@
-package com.almagro.presentation.detail
+package com.almagro.presentation.state
 
 sealed class CardDetailViewState<out T> {
     object Loading : CardDetailViewState<Nothing>()
