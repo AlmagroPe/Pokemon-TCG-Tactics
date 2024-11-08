@@ -9,17 +9,22 @@ import javax.inject.Inject
 class CardDataRepository
 @Inject constructor(private val cardDataSource: CardDataSource) : CardRepository {
 
-    private var pageSize = 10
+    private var page = 1
+    private val pageSize = 10
 
     override suspend fun fetchCards(): Result<List<CardInfo>> =
-        cardDataSource.fetchCards(pageSize)
+        cardDataSource.fetchCards(pageSize, page)
             .map { cards ->
-                pageSize += 10
+                if (cards.isNotEmpty()) { page++ }
                 cards.map { cardInfoToDomain(it) }
             }.onFailure {
-                pageSize = 0
+                resetPagination()
             }
 
     override suspend fun fetchCardDetail(cardId: String): Result<CardInfo> =
         cardDataSource.fetchCardDetail(cardId).map { cardInfoToDomain(it) }
+
+    private fun resetPagination() {
+        page = 1
+    }
 }

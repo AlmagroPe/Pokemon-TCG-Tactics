@@ -8,10 +8,10 @@ import javax.inject.Inject
 class CardDataSourceImpl
 @Inject constructor(private val cardApi: CardApi) : CardDataSource {
 
-    override suspend fun fetchCards(pageSize: Int): Result<List<CardInfoResponse>> =
+    override suspend fun fetchCards(pageSize: Int, page: Int): Result<List<CardInfoResponse>> =
         withContext(Dispatchers.IO) {
             try {
-                val response = cardApi.getCards(pageSize)
+                val response = cardApi.getCards(pageSize, page)
                 Result.success(response.data)
             } catch (e: Exception) {
                 Result.failure(e)

@@ -10,7 +10,7 @@ interface CardApi {
 
     @Headers("Accept: application/json")
     @GET("cards")
-    suspend fun getCards(@Header("pageSize") pageSize: Int): CardsResponse
+    suspend fun getCards(@Header("pageSize") pageSize: Int, @Header("page") page: Int): CardsResponse
 
     @Headers("Accept: application/json")
     @GET("cards")
